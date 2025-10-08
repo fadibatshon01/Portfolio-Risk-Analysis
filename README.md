@@ -17,11 +17,12 @@
 </div>
 
 <!-- Disclaimer -->
+<p
 <blockquote>
   <strong>Disclaimer:</strong> Cell references and ranges (e.g., <code>B3</code>, <code>B6</code>, <code>AP22–AP24</code>, and 3-column blocks like <code>D:E:F</code>) may differ in your sheet. 
   Adjust anchors and ranges to match your layout—the formula <em>patterns</em> remain the same.
 </blockquote>
-
+<p
 <hr />
 
 <!-- TOC -->
@@ -120,6 +121,10 @@
 
 <hr />
 
+<p align="center">
+  <img src="images/Data.png">
+</p>
+
 <!-- Problem -->
 <h2 id="problem">1) Problem Statement &amp; Why It Matters</h2>
 <p>
@@ -160,6 +165,7 @@
 
 <hr />
 
+
 <!-- Modeling -->
 <h2 id="modeling">3) Modeling &amp; Math (Ground Truth)</h2>
 
@@ -194,6 +200,11 @@
 <p><code>α = Actual − Expected</code>. Positive alpha indicates outperformance beyond risk exposure.</p>
 
 <hr />
+
+<p align="center">
+  <img src="images/tables 1.png" alt="tables 1" width="50%">
+  <img src="images/tables 2.png" alt="tables 2" width="50%">
+</p> 
 
 <!-- Implementation -->
 <h2 id="implementation">4) Implementation Details</h2>
@@ -262,6 +273,12 @@
 
 <hr />
 
+<p align="center">
+  <img src="images/1.png" alt="1" width="50%">
+  <img src="images/2.png" alt="2" width="50%">
+<p>
+
+
 <!-- Findings -->
 <h2 id="findings">6) Example Findings (from the showcased window)</h2>
 <ul>
@@ -273,6 +290,10 @@
 </ul>
 
 <hr />
+
+<p align="center">
+  <img src="images/Results.png">
+</p>
 
 <!-- QA -->
 <h2 id="qa">7) Validation &amp; QA</h2>
