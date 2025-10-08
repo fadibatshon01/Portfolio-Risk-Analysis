@@ -1,7 +1,7 @@
 <!-- Header -->
 <div align="center">
 
-  <h1>Portfolio Risk Analysis and Optimization Project -</h1>
+  <h1>Portfolio Risk Analysis and Optimization Project </h1>
   <p><em>Sheets-native portfolio analytics: returns, risk, factor exposure, and attribution</em></p>
 
   <p>
