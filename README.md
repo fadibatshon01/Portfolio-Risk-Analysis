@@ -16,13 +16,14 @@
   </sub>
 </div>
 
+<br><br> <!-- Adds vertical space above Disclaimer -->
+
 <!-- Disclaimer -->
-<p
 <blockquote>
   <strong>Disclaimer:</strong> Cell references and ranges (e.g., <code>B3</code>, <code>B6</code>, <code>AP22–AP24</code>, and 3-column blocks like <code>D:E:F</code>) may differ in your sheet. 
   Adjust anchors and ranges to match your layout—the formula <em>patterns</em> remain the same.
 </blockquote>
-<p
+
 <hr />
 
 <!-- TOC -->
@@ -201,10 +202,11 @@
 
 <hr />
 
-<p align="center">
-  <img src="images/tables 1.png" alt="tables 1" width="50%">
-  <img src="images/tables 2.png" alt="tables 2" width="50%">
-</p> 
+<!-- Example Tables (Side by Side) -->
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+  <img src="images/tables 1.png" alt="tables 1" width="48%">
+  <img src="images/tables 2.png" alt="tables 2" width="48%">
+</div>
 
 <!-- Implementation -->
 <h2 id="implementation">4) Implementation Details</h2>
