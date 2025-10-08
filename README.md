@@ -16,6 +16,12 @@
   </sub>
 </div>
 
+<!-- Disclaimer -->
+<blockquote>
+  <strong>Disclaimer:</strong> Cell references and ranges (e.g., <code>B3</code>, <code>B6</code>, <code>AP22–AP24</code>, and 3-column blocks like <code>D:E:F</code>) may differ in your sheet. 
+  Adjust anchors and ranges to match your layout—the formula <em>patterns</em> remain the same.
+</blockquote>
+
 <hr />
 
 <!-- TOC -->
@@ -68,7 +74,6 @@
       <li>Stock 1 → <strong>D:E:F</strong>, Stock 2 → <strong>G:H:I</strong>, …, Stock 10 → <strong>AE:AF:AG</strong></li>
       <li>Daily %Δ formula in the third column of each block (start at row 11):<br/>
         <pre><code>=IF(OR(E11="",E10=""),"",E11/E10-1)</code></pre>
-        (When pasted in the next block, it becomes <code>H11/H10-1</code>, then <code>K11/K10-1</code>, etc.)
       </li>
     </ul>
   </li>
@@ -168,9 +173,7 @@
 </ul>
 
 <h3>3.3 Covariance &amp; Alignment</h3>
-<p>
-  We pair each stock’s daily return with the market return from the same or nearest previous trading day to handle holidays &amp; gaps:
-</p>
+<p>We pair each stock’s daily return with the market return from the same or nearest previous trading day to handle holidays &amp; gaps:</p>
 <pre><code>=IFERROR(
   COVARIANCE.P(
     FILTER( XLOOKUP(D$11:D, A$11:A, C$11:C, "", -1), (D$11:D&gt;=$B$3)*(D$11:D&lt;=$B$6) ),
@@ -241,7 +244,6 @@
 <p><strong>Portfolio actual return over window</strong></p>
 <pre><code>=LET(pr, &lt;portfolio_return_series&gt;, rf, FILTER(pr, (md&gt;=$B$3)*(md&lt;=$B$6)*ISNUMBER(pr)),
      IF(COUNT(rf)&lt;2,"", PRODUCT(1+rf) - 1))</code></pre>
-<p><em>Note:</em> This compounds daily returns; if you want a simple (end/start − 1) portfolio result, compute end/start at the position level and weight by ending market value or use an index series.</p>
 
 <p><strong>Sharpe Ratio</strong></p>
 <pre><code>=( &lt;PortfolioActual&gt; - $AP$23 ) / &lt;PortfolioVolAnnual&gt;</code></pre>
